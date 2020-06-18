@@ -103,7 +103,7 @@
      （加入遠端的 repository 代號叫做 origin ）
    - `git branch <branch-name>`
    - 用之前學到的 command line 開始修改檔案
-   - `git commit -a, "new-commit-name"`
+   - `git commit -am, "new-commit-name"`
 3. 修改完之後 push 到 remote 端
    `git push origin "branch-name"`
 4. 在 Github 上面創一個 pull request 之後讓大家一起 code review ，沒問題之後把 branch merge 回 master
