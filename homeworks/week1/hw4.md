@@ -22,12 +22,12 @@
 >
 > 因此，你必須教他 Git 的基本概念以及基礎的使用，例如說 add 跟 commit，若是還有時間的話可以連 push 或是 pull 都講，菜哥能不能順利成為電視笑話冠軍，就靠你了！
 
-### Why?
+## Why?
 
 剛剛你有提到因為你的笑話會不斷的演進，所以會一直有新版本的產生，為了不要直接覆蓋，所以用複製檔案來建立新的版本，可是這樣檔案就越來越多，到最後都不知道哪個裡面有什麼，非常的困擾。
 攻城屍們也跟你有一模一樣的困擾，尤其他們的 code (也就是你的笑話) 資料量更多更複雜，有時候趕時間甚至需要一群人同時一起寫一個笑話，常常不知道誰改了什麼、或是到底要用哪個檔案開始改，改到後來可能你修前面的笑話、我改後面的笑話，結合起來味道卻變了，一點都不好笑，所以需要一個更聰明的辦法來做統一管理，並且讓大家清楚看到每個人做了什麼，於是乎 Git 就誕生了！
 
-### What?
+## What?
 
 那麼 Git 跟你之前直接在電腦複製、建立新版本的方法有什麼不同呢？ Git 基本上就是其中一種**做版本控制的程式**，統一管理不同版本發生的事情，而且功能更加強大。在 Git 的世界裡，對於不同版本的笑話儲存是非常嚴謹的，這裡分別介紹幾個強大的功能：
 
@@ -48,7 +48,7 @@
      另外菜哥你應該也想到了，當你的笑話事業越做越成功，一人團隊最後可能會變成公司規模的笑話團隊。人一多，笑話的版本控制就更困難了，可是有了 branch 之後，再多人你都不用怕，明日笑話顧問之星就是你！
 
 
-### Git 基本使用
+## Git 基本使用
 
 *我知道你現在一定迫不及待想要學會這個技能了，還記得你之前陪 h0w 哥來找我學 command line 嗎？現在我們一樣要打開 git bash 環境，好好跟靛瑙談一場 git 戀愛 <3* 
 
@@ -65,7 +65,7 @@
   第一階段：可以想成把你電腦要歸檔的檔案們先 add 到空白沒名字的資料夾，也就是暫存，準備版本控制
   第二階段：確認這一階段要版本控制的東西，commit 後幫這個版本命名
 
-  ![ ](https://i0.wp.com/lailalaii.files.wordpress.com/2020/06/picture.png?ssl=1)
+  <img src="https://i0.wp.com/lailalaii.files.wordpress.com/2020/06/picture.png?ssl=1" alt=" " title="改自：Git 與 Github 版本控制基本指令與操作入門教學" style="zoom: 50%;" />
 
   1. `git init` - 將某資料夾做 git 版本控制 ，就是告訴電腦這個資料夾我等等要做版本控制
   2. `git add . ` - 把所有檔案放入暫存
@@ -75,7 +75,7 @@
 
   現在我們在綠色階段，要進入橘色階段，也就是和遠端同步，就是把我們的 localrepo 推 (push) 到 remote repo的感覺。
 
-  ![iT 邦幫忙::一起幫忙解決難題，拯救IT 人的一天](C:\Users\柔均\Desktop\q5Iwfk0.png)
+  <img src="https://static.coderbridge.com/img/Lailalaii/77182ee2f50d43c7af474fabfa6b08ea.png" title="改自：Git 與 Github 版本控制基本指令與操作入門教學" style="zoom: 67%;" />
 
   1. 在 Github 端建好一個空 repo （記得要是空的！名稱不一定要和 local 端一樣）
      小簡介：Github 其實就是一個可以免費放 git 程式碼的平台之一，競爭對手還有 GitLab & Bitbucket
@@ -88,7 +88,7 @@
 
      
 
-### Working flow - 笑話團隊之多人協作
+## Working flow - 笑話團隊之多人協作
 
 *好得，現在你基本上已經知道怎麼一步步用 git 來管理你的笑話們了（也就是從最左邊 working directory 到最右邊 remote repo 的部分），再來我們要學習的是變成笑話團隊之後，我們如何多人一起在同一個檔案底下開發新的梗，還有修改之前不好笑的笑話 bug。*
 
@@ -116,7 +116,7 @@
 
 
 
-### Git 相關指令整理
+## Git 相關指令整理
 
 | syntax                                             | function                                                     |
 | -------------------------------------------------- | ------------------------------------------------------------ |
@@ -136,10 +136,10 @@
 | git branch -m <name>                               | 改 branch 名稱                                               |
 | git merge <branch-a>                               | 把 branch-a 合併到該位置<br />如果是 branch-a 合併到 master ，記得先移到 master 再動作 |
 | git push origin <branch name>                      | 把某個 branch push 到 remote                                 |
-| git pull origin <branch name>                      |                                                              |
+| git pull origin <branch name>                      | 把某個 branch pull 回 local                                  |
 | git reset HEAD^ --hard<br />git reset HEAD^ --soft | 直接刪除最後一個 commit，都不要了<br />打開上一個 commit 修改 |
 
-### 我自問也自答
+## 我自問也自答
 
 ---
 
@@ -154,3 +154,9 @@ A：It's fine. It will create a branch-a1 in remote side automatically.
 
 Q：在 local 端修改檔案 push 之前為什麼不用先 add ？
 A：因為 `git commit -am  ` 其實就是結合`add & commit`，特別要注意的是，如果你的修改是新建一個檔案的話，必須手動 `commit add` 才能 `commit -am`，理由是 `commit -am`只會 add 已經有的檔案。
+
+
+
+## 參考資料
+
+1. https://blog.techbridge.cc/2018/01/17/learning-programming-and-coding-with-python-git-and-github-tutorial/
