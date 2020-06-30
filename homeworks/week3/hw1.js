@@ -1,4 +1,4 @@
-/* eslint-disable */ 
+/* eslint-disable semi */
 function add(a, b) {
   return a + b
 }
