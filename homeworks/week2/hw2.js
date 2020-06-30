@@ -6,6 +6,8 @@ function capitalize(str) {
     }else{
         return str
     }  
+    //簡易法 return str[0].toUpperCase() + str.slice(1);
+    // 可以直接用 toUpperCase() ，另外 .slice 可以直接接上剩下的字串
 }
 
 console.log(capitalize('nick'))

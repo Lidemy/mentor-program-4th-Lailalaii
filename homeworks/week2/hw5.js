@@ -1,4 +1,9 @@
 function join(arr, concatStr) {
+    if (arr.length === 0){ //special case
+        return '';
+    }
+
+
     let ans =''
     for (let i=0; i<(arr.length-1); i++){
         ans += arr[i] + concatStr
