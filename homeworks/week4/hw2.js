@@ -29,7 +29,7 @@ if (process.argv[2] === 'read') {
     `https://lidemy-book-store.herokuapp.com/books/${process.argv[3]}`,
     (err, response, body) => {
       // console.log(httpResponse.statusCode) // 印出狀態碼
-      if (response.statusCode >= 400 && response.statusCode < 500) {
+      if (response.statusCode >= 400 && response.statusCode <= 500) {
         return console.log('抓取失敗');
       }
       console.log(JSON.parse(body));
@@ -42,7 +42,7 @@ if (process.argv[2] === 'delete') {
   request.delete(
     `https://lidemy-book-store.herokuapp.com/books/${process.argv[3]}`,
     (response) => {
-      if (response.statusCode >= 400 && response.statusCode < 500) {
+      if (response.statusCode >= 400 && response.statusCode < 600) {
         return console.log('刪除失敗');
       }
       console.log('刪除成功！');
@@ -59,7 +59,7 @@ if (process.argv[2] === 'create') {
       },
     },
     (response) => {
-      if (response.statusCode >= 400 && response.statusCode < 500) {
+      if (response.statusCode >= 400 && response.statusCode < 600) {
         return console.log('新增失敗');
       }
       console.log('新增成功！');
@@ -77,7 +77,7 @@ if (process.argv[2] === 'update') {
       },
     },
     (response) => {
-      if (response.statusCode >= 400 && response.statusCode < 500) {
+      if (response.statusCode >= 400 && response.statusCode < 600) {
         return console.log('更新失敗');
       }
       console.log('更新成功！');
