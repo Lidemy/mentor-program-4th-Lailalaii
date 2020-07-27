@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>lazy form</title>
+  <meta name=”viewport” content=”width =device-width, initial-scale=1.0″>
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <!--放 CSS 的地方-->
+  <style>
+    .form {
+      max-width: 645px;
+      box-shadow: 1.8px 2.4px 5px 0 rgba(0, 0, 0, 0.3);
+      margin: 10rem auto 4rem auto;
+
+    }
+
+    .wrapper {
+      padding-top: 3rem;
+      padding-left: 6%;
+      border-top: solid 8px #fad312;
+     
+    }
+
+    .title {
+      font-size: 36px;
+      margin-top: 1.6rem;
+    }
+
+    .detail {
+      font-size: 14px;
+      line-height: 1.5rem;
+    }
+
+    .nessecary {
+      color: #e74149;
+      font-size: 16px;
+    }
+
+    .section_title {
+      font-size: 20px;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .input-type {
+      color: #afafaf;
+      font-size: 16px;
+      border-color: #d0d0d0;
+      border: solid;
+      border-width: 1px;     
+    }
+
+    .section-label {
+      line-height: 2rem;
+    }
+
+    .section_desc {
+      font-size: 14px;
+      margin-bottom: 1rem;
+
+    }
+
+    .section_final {
+      font-size: 14px;
+      padding-bottom: 4rem;
+    }
+
+    .submit {
+      background: #fad312;
+      width: 92px;
+      height: 40px;
+      border: 0;
+      border-radius: 3px;
+      font-size: 15px;
+      margin-top: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer {
+      color: #999999;
+      font-size: 13px;
+      background: #000000;
+      text-align: center;
+      padding: 2rem 0;
+      border-top: solid 2px #fad312;
+    }
+
+    .add_Red_Star:after {
+      content: '*';
+      color: red;
+      margin-left: 0.5rem;
+    }
+  </style>
+
+</head>
+
+<body>
+  <form class="form">
+    <div class="wrapper">
+      <div class="header">
+        <h1 class="title">
+          新拖延運動報名表單
+        </h1>
+        <p class="detail">
+          活動日期：2020/12/10 ~ 2020/12/11
+          <br />
+          活動地點：台北市大安區新生南路二段1號
+        </p>
+        <div class="nessecary"> * 必填</div>
+      </div>
+      <div class="questionlist">
+        <div class="section">
+          <div class="section_title add_Red_Star">暱稱</div>
+          <div>
+            <input class="input-type" type="text" value="您的回答" required />
+          </div>
+        </div>
+        <div class="section">
+          <div class="section_title add_Red_Star">電子郵件</div>
+          <div>
+            <input class="input-type" type="email" value="您的電子郵件" required />
+          </div>
+        </div>
+        <div class="section">
+          <div class="section_title add_Red_Star">手機號碼</div>
+          <div>
+            <input class="input-type" type="tel" value="您的手機號碼" required />
+          </div>
+        </div>
+        <div class="section">
+          <div class="section_title add_Red_Star">報名類型</div>
+          <div>
+            <input type="radio" name="type" id="imagination"/>
+            <label class="section-label" for="imagination"> 躺在床上用想像力實作 </label>
+          </div>
+          <div>
+            <input type="radio" name="type" id="hands-on" />
+            <label class="section-label" for="hands-on"> 趴在地上滑手機找現成的 </label>
+          </div>
+        </div>
+        <div class="section">
+          <div class="section_title add_Red_Star">怎麼知道這個活動的？</div>
+          <div>
+            <input class="input-type" type="text" value="您的回答" required />
+          </div>
+        </div>
+        <div class="section">
+          <div class="section_title">其他</div>
+          <div class="section_desc">對活動的一些建議</div>
+          <div>
+            <input class="input-type" type="text" value="您的回答" />
+          </div>
+        </div>
+
+      </div>
+      <div>
+        <input class="submit" type="submit" />
+        <div class="section_final">請勿透過表單送出您的密碼。</div>
+      </div>
+  </form>
+  </div>
+
+  <div class="footer">
+    © 2020 © Copyright. All rights Reserved.
+  </div>
+
+</body>
+
+</html>
