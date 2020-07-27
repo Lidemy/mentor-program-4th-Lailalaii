@@ -12,26 +12,27 @@
     body {
       background: rgba(0, 0, 0, 0.1);
     }
+
     .form {
       max-width: 645px;
       background: white;
       box-shadow: 1.8px 2.4px 5px 0 rgba(0, 0, 0, 0.3);
       margin: 10rem auto 4rem auto;
+      border-top: solid 8px #fad312;
     }
 
     .wrapper {
       padding-top: 3rem;
       padding-left: 6%;
-      border-top: solid 8px #fad312;
-     
     }
 
-    .title {
+    .header_title {
       font-size: 36px;
+      font-weight: bold;
       margin-top: 1.6rem;
     }
 
-    .detail {
+    .header_detail {
       font-size: 14px;
       line-height: 1.5rem;
     }
@@ -43,26 +44,25 @@
 
     .section_title {
       font-size: 20px;
+      font-weight: normal;
       margin-top: 3rem;
       margin-bottom: 1rem;
     }
 
-    .input-type {
+    input [type=text]{
       color: #afafaf;
       font-size: 16px;
-      border-color: #d0d0d0;
-      border: solid;
-      border-width: 1px;     
+      border: solid 1px #d0d0d0;
     }
 
-    .section-label {
+    label {
+      display: block;
       line-height: 2rem;
     }
 
     .section_desc {
       font-size: 14px;
-      margin-bottom: 1rem;
-
+      margin-bottom: 1.5rem;
     }
 
     .section_final {
@@ -72,6 +72,7 @@
 
     .submit {
       background: #fad312;
+      color: black;
       width: 92px;
       height: 40px;
       border: 0;
@@ -81,20 +82,21 @@
       margin-bottom: 1rem;
     }
 
-    .footer {
+    footer {
       color: #999999;
       font-size: 13px;
       background: #000000;
       text-align: center;
-      padding: 2rem 0;
+      padding: 1.5rem 0;
       border-top: solid 2px #fad312;
     }
 
-    .add_Red_Star:after {
+    .red-star:after {
       content: '*';
       color: red;
       margin-left: 0.5rem;
     }
+
   </style>
 
 </head>
@@ -103,10 +105,10 @@
   <form class="form">
     <div class="wrapper">
       <div class="header">
-        <h1 class="title">
+        <h1 class="header_title">
           新拖延運動報名表單
         </h1>
-        <p class="detail">
+        <p class="header_detail">
           活動日期：2020/12/10 ~ 2020/12/11
           <br />
           活動地點：台北市大安區新生南路二段1號
@@ -115,45 +117,45 @@
       </div>
       <div class="questionlist">
         <div class="section">
-          <div class="section_title add_Red_Star">暱稱</div>
+          <h2 class="section_title red-star">暱稱</h2>
           <div>
-            <input class="input-type" type="text" value="您的回答" required />
+            <input type="text" value="您的回答" required />
           </div>
         </div>
         <div class="section">
-          <div class="section_title add_Red_Star">電子郵件</div>
+          <h2 class="section_title red-star">電子郵件</h2>
           <div>
-            <input class="input-type" type="email" value="您的電子郵件" required />
+            <input type="email" value="您的電子郵件" required />
           </div>
         </div>
         <div class="section">
-          <div class="section_title add_Red_Star">手機號碼</div>
+          <h2 class="section_title red-star">手機號碼</h2>
           <div>
-            <input class="input-type" type="tel" value="您的手機號碼" required />
+            <input type="tel" value="您的手機號碼" required />
           </div>
         </div>
         <div class="section">
-          <div class="section_title add_Red_Star">報名類型</div>
+          <h2 class="section_title red-star">報名類型</h2>
+          <label>
+            <input type="radio" name="type" />
+            躺在床上用想像力實作
+          </label>
+          <label>
+            <input type="radio" name="type" />
+            趴在地上滑手機找現成的
+          </label>
+        </div>
+        <div class="section">
+          <h2 class="section_title red-star">怎麼知道這個活動的？</h2>
           <div>
-            <input type="radio" name="type" id="imagination"/>
-            <label class="section-label" for="imagination"> 躺在床上用想像力實作 </label>
-          </div>
-          <div>
-            <input type="radio" name="type" id="hands-on" />
-            <label class="section-label" for="hands-on"> 趴在地上滑手機找現成的 </label>
+            <input type="text" value="您的回答" required />
           </div>
         </div>
         <div class="section">
-          <div class="section_title add_Red_Star">怎麼知道這個活動的？</div>
-          <div>
-            <input class="input-type" type="text" value="您的回答" required />
-          </div>
-        </div>
-        <div class="section">
-          <div class="section_title">其他</div>
+          <h2 class="section_title">其他</h2>
           <div class="section_desc">對活動的一些建議</div>
           <div>
-            <input class="input-type" type="text" value="您的回答" />
+            <input type="text" value="您的回答" />
           </div>
         </div>
 
@@ -165,9 +167,9 @@
   </form>
   </div>
 
-  <div class="footer">
+  <footer>
     © 2020 © Copyright. All rights Reserved.
-  </div>
+  </footer>
 
 </body>
 
