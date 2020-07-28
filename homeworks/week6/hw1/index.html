@@ -35,18 +35,19 @@
     .wrapper {
       max-width: 1280px;
       margin: 0 auto;
+      padding: 0 1rem;
     }
 
     .banner {
       position: relative;
       height: 350px;
-      background: url("./2.jpg") center/ cover no-repeat;
+      background: url(./2.jpg) center/ cover no-repeat;
     }
 
       .banner:after {
         content: '';
         position: absolute;
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.3);
         top: 0;
         left: 0;
         right: 0;
@@ -115,8 +116,9 @@
 
     .section_desc {
       font-size: 16px;
-      line-height: 2em;
+      line-height: 3rem;
       margin: 42px 0px 68px 0px;
+      padding: 0 0.5rem;
     }
 
     .button {
@@ -171,9 +173,7 @@
       .feedback_block:after {
         content: '';
         position: absolute;
-        border-radius: 5px;
-        border-color: #c7e5ec;
-        border-width: 1px;
+        border: #c7e5ec 1px solid;
         box-shadow: -1.4px -1.4px 4px 0 #d8eaef;
         top: 4rem;
         left: 0;
@@ -182,7 +182,7 @@
         z-index: -1;
       }
 
-    .feedback_image img {
+    .feedback_avatar img {
       z-index: 2;
       border-style: solid;
       border-radius: 50%;
@@ -215,19 +215,20 @@
         align-items: flex-start;
       }
 
-    .link {
+    .footer-link {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
     }
 
-    .info_desc {
+    .footer-info_desc {
       font-size: 14px;
       margin-bottom: 16px;
       line-height: 2em;
+      padding-right: 0.5rem;
     }
 
-    .footer_site-name {
+    .footer-link_site-name {
       color: #489846;
       font-size: 36px;
       margin-bottom: 19px;
@@ -235,13 +236,16 @@
 
     .footer_bottom {
       background: #35564b;
-      padding: 12px 0px;
+      padding: 12px 1px;
       text-align: center;
       color: white;
       font-size: 16px;
     }
 
     @media(max-width: 768px) {
+      .wrapper {
+      }
+
       .navbar .wrapper {
         height: 100px;
         flex-direction: column;
@@ -267,16 +271,28 @@
         margin-top: 16px;
       }
 
+      .section_feedback {
+        flex-direction: column;
+        align-items: center;
+      }
+
       .section_images div {
         width: 50%;
       }
 
       .feedback_block {
-        display: flex;
-        flex-direction: column;
-        align-content: center;
+        width: 80%
+      }
+
+      .feedback_avatar img {
+        width: 20%;
+      }
+
+      .feedback_block:after {
+        top: 4rem;
       }
     }
+
   </style>
 
 </head>
@@ -338,21 +354,21 @@
       </h2>
       <div class="section_feedback">
         <div class="feedback_block">
-          <div class="feedback_image"><img src='./p-1.png'></div>
+          <div class="feedback_avatar"><img src='./p-1.png'></div>
           <div class="feedback_name">國父桑</div>
           <div class="feedback_desc">
             我一生疲於建國，去過日本，去過歐洲，卻從未到過台北101，也從來沒有吃過這麼好吃的東西...今天在時空旅行者的幫助下我終於吃到了...此生再無遺憾 QAQ!!
           </div>
         </div>
         <div class="feedback_block">
-          <div class="feedback_image"><img src='./p-2.png'></div>
+          <div class="feedback_avatar"><img src='./p-2.png'></div>
           <div class="feedback_name">可達鴨</div>
           <div class="feedback_desc">
             三雙鞋等於30，兩個人加一雙鞋等於20，一雙冰淇淋加一雙冰淇淋加一個人等於13，那$#%$#%^%$^##$%等於多少...唉，大概咬一口就知道了!!!
           </div>
         </div>
         <div class="feedback_block">
-          <div class="feedback_image"><img src='./p-3.png'></div>
+          <div class="feedback_avatar"><img src='./p-3.png'></div>
           <div class="feedback_name">旅かえる旅行青蛙</div>
           <div class="feedback_desc">
             自從呱呱呱呱呱以後，我呱呱呱呱呱，非常感謝呱呱呱呱呱，下次呱呱呱呱呱我呱呱呱呱呱，一定呱呱呱呱呱!!!
@@ -372,8 +388,8 @@
   <footer>
     <div class="footer_top">
       <div class="wrapper">
-        <div class="info">
-          <p class="info_desc">
+        <div class="footer-info">
+          <p class="footer-info_desc">
             餐館地址: 天上地下天堂路三分之一里六段520號
             <br />
             訂位專線：02-1314-5566
@@ -384,11 +400,11 @@
           </p>
         </div>
 
-        <div class="link">
-          <div class="footer_site-name">
+        <div class="footer-link">
+          <div class="footer-link_site-name">
             Just A Bite!
           </div>
-          <div class="socialmedia">
+          <div class="footer-link_socialmedia">
             Facebook / Instagram / Youtube
           </div>
         </div>
@@ -398,7 +414,5 @@
       <a>Copyright © 2020 Just A Bite All Rights Reserved. 咬一口股份有限公司版權所有</a>
     </div>
   </footer>
-
-
 </body>
 </html>
